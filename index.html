@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="united.bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-table.min.css">
+    <style>
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            color: white;
+            background-color: #E95420;
+        }
+
+        .table-header {
+            color: white;
+            background-color: #E95420;
+        }
+
+        .bootstrap-table .table {
+            border: solid #E95420;
+            border-bottom: 2px solid #E95420;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+            <div class="container">
+                <a href="../" class="navbar-brand">Logging</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Other Logs
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="themes">
+                                <a class="dropdown-item" href="index.html">Default</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.html">Cerulean</a>
+                                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Pull Request
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="themes">
+                                <a class="dropdown-item" href="Pull-Request-1.html">Pull-Request-1</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.html">Cerulean</a>
+                                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Success</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Success card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-header">Skipped</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Danger card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">Failed</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Warning card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover" data-search="true" data-show-columns="true" data-pagination="true" data-sort="true">
+                    <thead class="table-header">
+                        <tr>
+                            <th data-field="name" data-sortable="true">Name</th>
+                            <th data-field="stargazers_count" data-sortable="true">stargazers_count</th>
+                            <th data-field="forks_count" data-sortable="true">forks_count</th>
+                            <th data-field="description" data-sortable="true">description</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-table.min.js"></script>
+    <script>
+        var data = [{
+                "name": "bootstrap-table",
+                "stargazers_count": "526",
+                "forks_count": "122",
+                "description": "An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features. (supports twitter bootstrap v2 and v3) "
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "bootstrap-show-password",
+                "stargazers_count": "32",
+                "forks_count": "11",
+                "description": "Show/hide password plugin for twitter bootstrap."
+            },
+            {
+                "name": "blog",
+                "stargazers_count": "13",
+                "forks_count": "4",
+                "description": "my blog"
+            },
+            {
+                "name": "scutech-redmine",
+                "stargazers_count": "6",
+                "forks_count": "3",
+                "description": "Redmine notification tools for chrome extension."
+            }
+        ];
+
+        $(function () {
+            $('.table').bootstrapTable({
+                data: data
+            });
+        });
+    </script>
+</body>
+
+</html>
