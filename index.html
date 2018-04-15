@@ -10,6 +10,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="united.bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap-table.min.css">
+    <link rel="stylesheet" href="bootstrap-table-group-by.css">
+    <link rel="stylesheet" href="select2.min.css">
     <style>
         .dropdown-item:hover,
         .dropdown-item:focus {
@@ -103,7 +105,14 @@
 
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-hover" data-search="true" data-show-columns="true" data-pagination="true" data-sort="true">
+                <table class="table table-hover" 
+                       data-search="true" 
+                       data-show-columns="true" 
+                       data-pagination="true" 
+                       data-sort="true"
+                       data-toggle="table"
+                       data-group-by="true"
+                       data-group-by-field="name">
                     <thead class="table-header">
                         <tr>
                             <th data-field="name" data-sortable="true">Name</th>
@@ -122,12 +131,103 @@
     <script src="jquery-3.3.1.min.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="bootstrap-table.min.js"></script>
+    <script src="select2.min.js"></script>
     <script>
         var data = [{
                 "name": "bootstrap-table",
                 "stargazers_count": "526",
                 "forks_count": "122",
                 "description": "An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features. (supports twitter bootstrap v2 and v3) "
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
+            },
+            {
+                "name": "multiple-select",
+                "stargazers_count": "288",
+                "forks_count": "150",
+                "description": "A jQuery plugin to select multiple elements with checkboxes :)"
             },
             {
                 "name": "multiple-select",
@@ -155,10 +255,10 @@
             }
         ];
 
-        $(function () {
-            $('.table').bootstrapTable({
-                data: data
-            });
+
+        $('.table').bootstrapTable({
+            data: data,
+            search: true
         });
     </script>
 </body>
